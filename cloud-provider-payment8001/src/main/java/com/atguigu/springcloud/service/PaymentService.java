@@ -1,6 +1,7 @@
 package com.atguigu.springcloud.service;
 
-import com.atguigu.springcloud.entities.Payment;
+
+import com.atguigu.spring.entities.Payment;
 
 /**
  * @Author: 蔡佳兴

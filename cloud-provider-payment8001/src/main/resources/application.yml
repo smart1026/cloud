@@ -12,5 +12,5 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis:  # model的包
-  type-aliases-package: com.atguigu.springCloud.entities
+  type-aliases-package: com.atguigu.spring.entities
   mapper-locations: classpath:mapper/*.xml
