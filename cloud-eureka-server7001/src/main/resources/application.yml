@@ -1,0 +1,14 @@
+server:
+  port: 7001 #eureka
+spring:
+  application:
+    name: cloud-eureka-server
+#eureka的配置分为3类，server  client 实例的  eureka-server既是服务端又是客户端
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
