@@ -1,4 +1,4 @@
-package com.study.spring;
+package com.study.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,16 +6,16 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @Author: 蔡佳兴
- * @createTime: 2023年03月30日 20:39:17
- * @version:
+ * @createTime: 2023年03月30日 18:56:39
+ * @version: 1.0
  * @Description:
  */
 @SpringBootApplication
 @EnableEurekaClient
-public class OrderMain80 {
+public class PaymentMain8002 {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderMain80.class,args);
+        SpringApplication.run(PaymentMain8002.class,args);
     }
 
 }

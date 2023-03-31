@@ -1,7 +1,7 @@
-package com.atguigu.spring.controller;
+package com.study.spring.controller;
 
-import com.atguigu.spring.entities.CommonResult;
-import com.atguigu.spring.entities.Payment;
+import com.study.spring.entities.CommonResult;
+import com.study.spring.entities.Payment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +19,8 @@ import org.springframework.web.client.RestTemplate;
 public class OrderController {
 
 
-    public static final String PAYMENT_URL = "http://localhost:8001";
+    //public static final String PAYMENT_URL = "http://localhost:8001";
+    public static final String PAYMENT_URL = "http://cloud-provider-service";
 
     @Autowired
     private RestTemplate restTemplate;
