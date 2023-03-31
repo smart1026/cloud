@@ -1,4 +1,4 @@
-package com.atguigu.springcloud.service;
+package com.study.springcloud.service;
 
 
 import com.atguigu.spring.entities.Payment;

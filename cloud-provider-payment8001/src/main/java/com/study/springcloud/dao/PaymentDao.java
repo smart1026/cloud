@@ -1,4 +1,4 @@
-package com.atguigu.springcloud.dao;
+package com.study.springcloud.dao;
 
 import com.atguigu.spring.entities.Payment;
 import org.apache.ibatis.annotations.Mapper;
