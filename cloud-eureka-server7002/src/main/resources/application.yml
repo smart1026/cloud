@@ -11,4 +11,6 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
-
+  server: #默认保护机制是true  关闭是false
+    enable-self-preservation: false
+    lease-expiration-duration-in-seconds: 2000
