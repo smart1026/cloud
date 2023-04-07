@@ -43,8 +43,22 @@ public class PaymentController {
      * @return
      */
     @GetMapping("/hystrix/timeout")
-    public String paymentInfo_TimeOut(@RequestParam("id") Integer id) {
+    public String paymentInfo_TimeOut(@RequestParam("id") Long id) {
         String result = paymentService.paymentInfo_TimeOut(id);
+        log.info("*****result:" + result);
+        return result;
+
+    }
+
+    /**
+     * 超时访问
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("/cricuit")
+    public String paymentCricuitBreaker(@RequestParam("id") Long id) {
+        String result = paymentService.paymentCricuitBreaker(id);
         log.info("*****result:" + result);
         return result;
 
