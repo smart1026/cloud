@@ -1,5 +1,7 @@
 package com.study.spring.service;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.study.spring.entities.CommonResult;
 import com.study.spring.entities.Payment;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -34,6 +36,9 @@ public interface PaymentHystrixService {
      */
     @GetMapping("/payment/hystrix/timeout")
     String paymentInfo_TimeOut(@RequestParam("id") Long id);
+
+
+
 
 
 }
