@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Description:
  */
 @Component
-@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT")
+@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT",fallback = PaymentFallbackService.class)
 public interface PaymentHystrixService {
 
     /**
