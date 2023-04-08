@@ -4,25 +4,20 @@ import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServl
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.context.annotation.Bean;
 
 /**
  * @Author: 蔡佳兴
- * @createTime: 2023年03月30日 18:56:39
- * @version: 1.0
+ * @createTime: 2023年04月08日 10:59:34
+ * @version:
  * @Description:
  */
 @SpringBootApplication
-@EnableEurekaClient
-@EnableDiscoveryClient
-@EnableCircuitBreaker
-public class PaymentHystrixMain8001 {
-
+@EnableHystrixDashboard
+public class HystrixDashboardMain9001 {
     public static void main(String[] args) {
-        SpringApplication.run(PaymentHystrixMain8001.class,args);
+        SpringApplication.run(HystrixDashboardMain9001.class,args);
     }
 
     /**
@@ -31,7 +26,7 @@ public class PaymentHystrixMain8001 {
      * 只要在自己的项目中配置上下面的servlet即可
      * @return
      */
-    @Bean
+    /*@Bean
     public ServletRegistrationBean getServlet(){
         HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
         ServletRegistrationBean<HystrixMetricsStreamServlet> registrationBean = new ServletRegistrationBean<>(streamServlet);
@@ -39,7 +34,6 @@ public class PaymentHystrixMain8001 {
         registrationBean.addUrlMappings("/hystrix.stream");
         registrationBean.setName("HystrixMetricsStreamServlet");
         return registrationBean;
-    }
-
+    }*/
 
 }
