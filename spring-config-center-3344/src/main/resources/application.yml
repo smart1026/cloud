@@ -10,7 +10,7 @@ spring:
         git:
           search-paths:
             - config
-          uri: https://github.com/smart1026/config.git
+          uri: git@github.com:smart1026/cloud.git
           username: caijiaxing1992@163.com
           password: cjx19921219
       label: main
