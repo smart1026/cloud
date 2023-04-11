@@ -1,0 +1,23 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center  # 应用名称
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:smart1026/springcloud-config.git #配置文件所在仓库
+          label: master #配置文件分支
+          search-paths:
+            - springcloud-config  #配置文件所在根目录
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      # 集群版
+      defaultZone: http://eureka7001.com:7001/eureka
+
