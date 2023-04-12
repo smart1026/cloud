@@ -2,7 +2,6 @@ package com.study.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @Author: 蔡佳兴
@@ -11,10 +10,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @Description:
  */
 @SpringBootApplication
-public class StreamMQProvider8801 {
+public class StreamMQConsumer8802 {
 
     public static void main(String[] args) {
-        SpringApplication.run(StreamMQProvider8801.class,args);
+        SpringApplication.run(StreamMQConsumer8802.class,args);
     }
 
 }
