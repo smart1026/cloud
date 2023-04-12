@@ -25,8 +25,8 @@ import java.util.List;
 public class OrderController {
 
 
-    //public static final String PAYMENT_URL = "http://localhost:8001";
-    public static final String PAYMENT_URL = "http://cloud-provider-service";
+    public static final String PAYMENT_URL = "http://localhost:8001";
+    //public static final String PAYMENT_URL = "http://cloud-provider-service";
 
     @Autowired
     private RestTemplate restTemplate;
@@ -57,6 +57,12 @@ public class OrderController {
         ServiceInstance serviceInstance = loadBalancer.instances(instances);
         URI uri = serviceInstance.getUri();
         return restTemplate.getForObject(uri + "/payment/lb",String.class);
+    }
+
+
+    @GetMapping(value = "/payment/zipkin")
+    public String paymentZipkin() {
+        return restTemplate.getForObject(PAYMENT_URL + "/payment/zipkin",String.class);
     }
 
 
