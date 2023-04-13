@@ -16,4 +16,4 @@ spring:
           - dataId: nacos-config-client-dev.yaml
           - dataId: nacos-config-client-test.yaml
           - dataId: nacos-config-client-prod.yaml
-        # ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file-extension}
+        # ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file-extension} 1
